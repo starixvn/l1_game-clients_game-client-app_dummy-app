@@ -1,16 +1,22 @@
-import { StatusBar } from "expo-status-bar";
+import { SafeAreaView, StatusBar, StyleSheet } from "react-native";
 import { WebView } from "react-native-webview";
 
 const simulatorURL = "https://gamelobby-simulator.lumigame.com/signin";
 
+const stylesheet = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
+
 export default function App() {
   return (
-    <>
-      <StatusBar style="auto" hidden={true} />
+    <SafeAreaView style={stylesheet.container}>
+      <StatusBar />
       <WebView
         source={{ uri: simulatorURL }}
         setSupportMultipleWindows={false}
       />
-    </>
+    </SafeAreaView>
   );
 }

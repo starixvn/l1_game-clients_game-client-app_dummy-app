@@ -12,3 +12,7 @@ web-build/
 
 # macOS
 .DS_Store
+
+# Natives
+ios/
+android/

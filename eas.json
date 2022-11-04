@@ -14,6 +14,15 @@
     "production": {}
   },
   "submit": {
-    "production": {}
+    "production": {
+      "ios": {
+        "appleId": "conall.nguyen@sabawork.com",
+        "ascAppId": "6444182116",
+        "appleTeamId": "TD6JJB8W2P",
+        "ascApiKeyPath": "./SubscriptionKey_CWS7494547.p8",
+        "ascApiKeyIssuerId": "af039ebe-4cef-45e8-bd71-da404f0186fc",
+        "ascApiKeyId": "CWS7494547"
+      }
+    }
   }
 }

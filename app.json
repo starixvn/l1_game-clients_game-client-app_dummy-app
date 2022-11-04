@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "dummy-app",
-    "slug": "dummy-app",
+    "name": "dummy-app88",
+    "slug": "dummy-app88",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -14,26 +14,24 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.conall.nguyen.dummyapp"
+      "bundleIdentifier": "com.conall.nguyen.dummyapp88"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.conall.nguyen.dummyapp"
+      "package": "com.conall.nguyen.dummyapp88"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "685832cb-1f78-41f1-83bd-cbad4bd6e87f"
+        "projectId": "96ed3bff-1e9a-4ad1-9d1e-d7419c0949ef"
       }
     }
   }

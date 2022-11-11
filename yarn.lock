@@ -3329,7 +3329,7 @@ expo-constants@~13.2.2, expo-constants@~13.2.4:
     "@expo/config" "~7.0.0"
     uuid "^3.3.2"
 
-expo-dev-client@~1.3.1:
+expo-dev-client@1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/expo-dev-client/-/expo-dev-client-1.3.1.tgz#bcaf46bd4646354d8c6fd3b2270d5802d221ac8b"
   integrity sha512-GGMaLwc3FNdcGB2UsEj252CV9DmWJWMblqX0h5AtiEnmKyVBRn3/yiQyWdPFDkLletYGvDeILfMHUo/PRdOGIA==
@@ -3421,7 +3421,7 @@ expo-modules-core@0.11.8:
     compare-versions "^3.4.0"
     invariant "^2.2.4"
 
-expo-splash-screen@~0.16.2:
+expo-splash-screen@0.16.2:
   version "0.16.2"
   resolved "https://registry.yarnpkg.com/expo-splash-screen/-/expo-splash-screen-0.16.2.tgz#38ecba9fc9fc2234ee38bcb818d8c88cd83cff9e"
   integrity sha512-AHSRyGwu58WNt8shW5g/4cQ9e9IzUwNTC/WGWxshHCwgbWIJmHLvK3+D45MTmzGWteOoTI8oV7KSQKBNJSTiyw==
@@ -3429,7 +3429,7 @@ expo-splash-screen@~0.16.2:
     "@expo/configure-splash-screen" "^0.6.0"
     "@expo/prebuild-config" "~5.0.0"
 
-expo-status-bar@~1.4.0:
+expo-status-bar@1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/expo-status-bar/-/expo-status-bar-1.4.0.tgz#c0317de2c53878340f4b4f00ff7e4ba14399a7fb"
   integrity sha512-vh98g8qMIjig/2XTBsoAWS6Vo2dIIwDWjB3/GiuZ9Lazpxc9GO/APfJ4dar7MibzIDUKIrjotrcL6rLdPH13Ew==
@@ -3439,7 +3439,7 @@ expo-updates-interface@~0.7.0:
   resolved "https://registry.yarnpkg.com/expo-updates-interface/-/expo-updates-interface-0.7.0.tgz#f4f03b61dbdd949cac9fb44e250e1162ba177650"
   integrity sha512-saThnbrYDSjKxfMFFguAvh5o5KGabvAOHItkJRwq2L3c0T/3q26Q0kM83880h/+TTtAVsl1+Vhny9d+ImD3yvQ==
 
-expo@~46.0.16:
+expo@46.0.16:
   version "46.0.16"
   resolved "https://registry.yarnpkg.com/expo/-/expo-46.0.16.tgz#8fe6d10207dabda34a684efac2c45c3c1c089f11"
   integrity sha512-lZETkf3t+gbZjKjSceIpU7I8Rmm5nZ0ZG1WPzNBBbm+k64/+kKV96s6RqS37W1TTDpIbd+AucT9kKpvtv0JB2A==
@@ -5922,10 +5922,10 @@ react-native-gradle-plugin@^0.0.7:
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.7.tgz#96602f909745239deab7b589443f14fce5da2056"
   integrity sha512-+4JpbIx42zGTONhBTIXSyfyHICHC29VTvhkkoUOJAh/XHPEixpuBduYgf6Y4y9wsN1ARlQhBBoptTvXvAFQf5g==
 
-react-native-web@~0.18.7:
-  version "0.18.10"
-  resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.18.10.tgz#fb4db047f4be7f9cf35f37ec8d52f7d1c450600f"
-  integrity sha512-YV2gtZa1n7ulTGp+HcxH+KsAtaDPBI/dKd9oOQS31zyFHURjObLUVkKnGjkmlYAUReWfvmlU64GzyNwoZF9/tA==
+react-native-web@0.18.7:
+  version "0.18.7"
+  resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.18.7.tgz#2b688502b3d389c49346fa3d8c9a20cfd52f507f"
+  integrity sha512-5DwcsrAqLjOvzJJk/XPozEtqCOF3hrCJ55buLOEPMxvS8lKxRdeMF9SZUI2zyqE8JcMFGtQzLhWAZGeaTrXaRg==
   dependencies:
     "@babel/runtime" "^7.18.6"
     create-react-class "^15.7.0"
@@ -6213,17 +6213,17 @@ reusify@^1.0.4:
   resolved "https://registry.yarnpkg.com/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
+rimraf@3.0.2, rimraf@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-3.0.2.tgz#f1a5402ba6220ad52cc1282bac1ae3aa49fd061a"
+  integrity sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
+  dependencies:
+    glob "^7.1.3"
+
 rimraf@^2.5.4, rimraf@^2.6.2:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.7.1.tgz#35797f13a7fdadc566142c29d4f07ccad483e3ec"
   integrity sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==
-  dependencies:
-    glob "^7.1.3"
-
-rimraf@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-3.0.2.tgz#f1a5402ba6220ad52cc1282bac1ae3aa49fd061a"
-  integrity sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
   dependencies:
     glob "^7.1.3"
 

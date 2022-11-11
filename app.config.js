@@ -1,12 +1,11 @@
 const packageJson = require("./package.json");
 
-const bundleIdentifier = "com.conall.nguyen.dummyapp88";
-
 module.exports = {
   expo: {
     name: packageJson.name,
     slug: packageJson.name,
     version: packageJson.version,
+    owner: "luminet",
     orientation: "portrait",
     icon: "./assets/icon.png",
     userInterfaceStyle: "automatic",
@@ -21,18 +20,19 @@ module.exports = {
     assetBundlePatterns: ["**/*"],
     ios: {
       supportsTablet: true,
-      bundleIdentifier: bundleIdentifier,
+      bundleIdentifier: packageJson.bundleIdentifier,
+      buildNumber: packageJson.buildNumber,
     },
     android: {
       adaptiveIcon: {
         foregroundImage: "./assets/adaptive-icon.png",
         backgroundColor: "#FFFFFF",
       },
-      package: bundleIdentifier,
+      package: packageJson.bundleIdentifier,
     },
     extra: {
       eas: {
-        projectId: "96ed3bff-1e9a-4ad1-9d1e-d7419c0949ef",
+        projectId: "f8e39713-b552-46bc-bc31-34ceba9bf6e0",
       },
     },
   },

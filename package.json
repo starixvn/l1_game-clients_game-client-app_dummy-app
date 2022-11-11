@@ -1,5 +1,6 @@
 {
-  "name": "dummy-app88",
+  "name": "lumi-games",
+  "bundleIdentifier": "com.luminet.games",
   "version": "1.0.0",
   "scripts": {
     "start": "expo start --dev-client",

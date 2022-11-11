@@ -1,6 +1,5 @@
 {
   "name": "lumi-games",
-  "bundleIdentifier": "com.luminet.games",
   "version": "1.0.0",
   "scripts": {
     "start": "expo start --dev-client",
@@ -10,7 +9,7 @@
     "build:ios:preview": "eas build --platform ios --local --profile preview --non-interactive",
     "build:ios:development": "eas build --platform ios --local --profile development --non-interactive",
     "build:ios:production": "rimraf app.ipa && eas build --platform ios --local --non-interactive --output app.ipa",
-    "upload": "iTMSTransporter -m upload -u $TRANSPORTER_USERNAME -p $TRANSPORTER_PASSWORD -asc_provider $TRANSPORTER_TEAM_ID -assetFile app.ipa"
+    "upload": "eas submit -p ios --path app.ipa"
   },
   "dependencies": {
     "expo": "46.0.16",

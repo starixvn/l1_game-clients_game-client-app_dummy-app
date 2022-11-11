@@ -13,7 +13,17 @@
     },
     "production": {
       "ios": {
-        "credentialsSource": "local"
+        "credentialsSource": "local",
+        "autoIncrement": true
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "phuongdn@icloud.com",
+        "appleTeamId": "D6D3U376DF",
+        "ascAppId": "6444356073"
       }
     }
   }

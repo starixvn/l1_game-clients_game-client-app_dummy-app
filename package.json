@@ -9,13 +9,15 @@
     "build:ios:preview": "eas build --platform ios --local --profile preview --non-interactive",
     "build:ios:development": "eas build --platform ios --local --profile development --non-interactive",
     "build:ios:production": "rimraf app.ipa && eas build --platform ios --local --non-interactive --output app.ipa",
-    "upload": "eas submit -p ios --path app.ipa"
+    "upload": "eas submit -p ios --path app.ipa",
+    "ota": "eas update -p ios --branch production --channel production"
   },
   "dependencies": {
     "expo": "46.0.16",
     "expo-dev-client": "1.3.1",
     "expo-splash-screen": "0.16.2",
     "expo-status-bar": "1.4.0",
+    "expo-updates": "0.14.7",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-native": "0.69.6",

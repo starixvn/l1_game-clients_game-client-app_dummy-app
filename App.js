@@ -1,7 +1,7 @@
 import { SafeAreaView, StatusBar, StyleSheet, View } from "react-native";
 import { WebView } from "react-native-webview";
 
-const simulatorURL = "https://gamelobby-simulator.lumigame.com/login";
+const simulatorURL = "https://google.com";
 
 const stylesheet = StyleSheet.create({
   statusBar: {

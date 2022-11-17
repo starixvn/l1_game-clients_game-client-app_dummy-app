@@ -8,7 +8,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -16,11 +16,13 @@
       "fallbackToCacheTimeout": 0,
       "url": "https://u.expo.dev/f8e39713-b552-46bc-bc31-34ceba9bf6e0"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.luminet.games",
-      "buildNumber": "11"
+      "buildNumber": "38"
     },
     "extra": {
       "eas": {
@@ -30,6 +32,7 @@
     "runtimeVersion": {
       "policy": "appVersion"
     },
-    "android": {}
+    "android": {},
+    "scheme": "lumigames"
   }
 }

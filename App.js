@@ -1,8 +1,7 @@
 import * as Linking from "expo-linking";
-import { SafeAreaView, StatusBar, StyleSheet, View, Text } from "react-native";
-import { WebView } from "react-native-webview";
+import { SafeAreaView, StatusBar, StyleSheet, View } from "react-native";
 
-const simulatorURL = "https://gamelobby-simulator.lumigame.com/login";
+import Game from "./Game";
 
 const stylesheet = StyleSheet.create({
   statusBar: {
@@ -19,14 +18,7 @@ const stylesheet = StyleSheet.create({
 });
 
 export default function App() {
-  const url = Linking.useURL();
-  let text = "";
-
-  if (url) {
-    const data = Linking.parse(url);
-
-    text = JSON.stringify(data);
-  }
+  const { queryParams } = Linking.parse(Linking.useURL() ?? "key");
 
   return (
     <>
@@ -34,11 +26,7 @@ export default function App() {
       <SafeAreaView style={stylesheet.navigationBar}>
         <View style={stylesheet.container}>
           <StatusBar />
-          <Text>{data}</Text>
-          <WebView
-            source={{ uri: simulatorURL }}
-            setSupportMultipleWindows={false}
-          />
+          <Game params={queryParams} />
         </View>
       </SafeAreaView>
     </>

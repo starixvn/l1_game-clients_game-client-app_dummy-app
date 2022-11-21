@@ -1,7 +1,6 @@
 import * as Linking from "expo-linking";
 import { SafeAreaView, StatusBar, StyleSheet, View } from "react-native";
-
-import Game from "./Game";
+import Game from "./DummyGame";
 
 const stylesheet = StyleSheet.create({
   statusBar: {

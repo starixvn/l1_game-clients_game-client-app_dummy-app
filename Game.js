@@ -1,25 +1,13 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { Component } from "react";
-import { WebView } from "react-native-webview";
+import DummyGame from "./DummyGame";
 
-const DUMMY_URI =
-  "https://download.cocos.com/DemoTeam/fruit/web-mobile/index.html";
-const LOGIN_URI = "https://gamelobby-simulator.lumigame.com/login";
-const KEY = "game";
 const STORAGE_KEY = "@key";
 
-export default class Game extends Component {
-  constructor() {
-    super();
-    this.state = { uri: "", isGame: false };
-  }
-
+export default class Game extends DummyGame {
   componentDidMount() {
     this.getFlagFromStorage().then((flag) => {
-      const isGame = flag === KEY;
-
-      if (isGame !== this.state.isGame) {
-        this.setState({ isGame });
+      if (!!flag) {
+        this.setState({ uri: flag });
       }
     });
   }
@@ -28,7 +16,7 @@ export default class Game extends Component {
     try {
       return await AsyncStorage.getItem(STORAGE_KEY);
     } catch (e) {
-      return "";
+      return null;
     }
   }
 
@@ -42,27 +30,19 @@ export default class Game extends Component {
     }
   }
 
-  shouldOpenGame(queryParams) {
-    const key = queryParams?.key;
+  setUri(queryParams) {
+    const key = queryParams?.uri;
+    const uri = decodeURI(key);
 
-    this.setFlagToStorage(queryParams.key);
-
-    return key === KEY;
-  }
-
-  getUri(flag) {
-    return flag ? LOGIN_URI : DUMMY_URI;
+    if (key && uri && uri != this.state.uri) {
+      this.setFlagToStorage(uri);
+      this.setState({ uri });
+    }
   }
 
   render() {
-    const shouldOpenGame =
-      this.state.isGame || this.shouldOpenGame(this.props.params);
+    this.setUri(this.props.params);
 
-    return (
-      <WebView
-        source={{ uri: this.getUri(shouldOpenGame) }}
-        setSupportMultipleWindows={false}
-      />
-    );
+    return super.render();
   }
 }

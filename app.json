@@ -13,7 +13,7 @@
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0,
+      "fallbackToCacheTimeout": 300000,
       "url": "https://u.expo.dev/f8e39713-b552-46bc-bc31-34ceba9bf6e0"
     },
     "assetBundlePatterns": [
@@ -22,7 +22,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.luminet.games",
-      "buildNumber": "47"
+      "buildNumber": "51"
     },
     "extra": {
       "eas": {

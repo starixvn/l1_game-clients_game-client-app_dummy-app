@@ -9,6 +9,9 @@
       "ios": {
         "credentialsSource": "local",
         "autoIncrement": true
+      },
+      "android": {
+        "autoIncrement": true
       }
     }
   },
@@ -18,6 +21,9 @@
         "appleId": "phuongdn@icloud.com",
         "appleTeamId": "D6D3U376DF",
         "ascAppId": "6444356073"
+      },
+      "android": {
+        "serviceAccountKeyPath": "keys/google-key.json"
       }
     }
   }

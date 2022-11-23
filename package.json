@@ -5,9 +5,12 @@
     "start": "expo start --dev-client",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web",
     "build:ios": "rimraf app.ipa && eas build --platform ios --local --non-interactive --output app.ipa",
-    "upload": "eas submit -p ios --path app.ipa",
+    "build:android": "rimraf app.aab && eas build --platform android --local  --non-interactive --output app.aab",
+    "build": "yarn build:ios && yarn build:android",
+    "submit:ios": "eas submit -p ios --path app.ipa",
+    "submit:android": "eas submit -p android --path app.aab",
+    "submit": "yarn submit:ios && yarn submit:android",
     "ota": "eas update -p ios --branch production --auto"
   },
   "dependencies": {

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pc-api-7742403866508050978-542",
+  "private_key_id": "e9f5f48e67d4177f76094ed1dc4e08331ba08584",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDAo6bB3wMbAaFQ\nKSNFs8LqqRLMt+btIIYlsyGt18up57OVsG3bDXHCirHbhGWMG5+h1rOVU8BWhnRk\ngB+SPJZ54Wd4MshVjQpqnhbkng+iaofZBffcXq6T6K2eo7mVlqIysXwA2UYbSya5\njI8K6lgIbfiKA0jaPLEUmcJBl2osIwgvw2hWbGgEVUVUsmGnNG//YzAGYKNMFLWL\n5WbFBXfUcwh3ScUDWq1wlOO98EqTq57R0m6bvox0ggu7VDVr6X5azy86oJEvkSX7\nj9ji42D/4WPiDF0OJaJUe5BITFC0SbVYTyldFVpaRQbt0df5bzchcpwLcAcQpFpx\nV5rv+QtJAgMBAAECggEAAtmI6n5Lk/cytTZelLXjkMgehJPF4UUlZuJfAazbEPDi\nCblZ7q8kuy2FEwvC2s8/zcuYzYE3K7CCgUgZ73Zg/X2Vo8QQjZ9wA4LCMPCbp5nu\n14mMkKB/8aU0CFBAuxNG4/wXKwYL0PSMJpuLNCyiT8GctyH0TnIuZnEd3A2K3wtB\nCrcXEXj8TeD3jbZ1OMACssSKWlVFOR6uXdYJsUn13dv3vmLcPdXpGAD4MCQPev8H\nZKJ3ZDCwxShqja4sQOU91LukN2SCFmqTxN7ZTIEyu564aPtGDkGcE12/G2uT0EM2\n6wmeKE0B3vRI2PH8orzaIPQ3ADP/OCgVbOArVmDSgQKBgQDs59UF23SpIaIkdkEn\nT/EMpcNkzXj+GRuOqHDQ/cR5LFvpyaBzRNyxE4vZl7p705r5dnNktBIaGadwRevR\nQYAJWTMhM1a4YaE/lGTogI10iSRFbiKRXdWPx37KUMaywR5QBOuLOIS7vFqQEd1V\ndmeRqEzI9hfpykVCTeFDIWoV6QKBgQDQKnRRKxPLVPacqaDoKlATiExz/Gdus3Xr\nvGaVKfg09507XePGAgy5tmaYk7oRA0OjM4lHyMH6QCKjWs+FjOe/Nkup8XHbM2wW\nm0mGRfNec3NO2nMX/ghtIKPtIoOTKns5bR/38UuGM7mqr1+xt9gFHKNk3NZaOxG0\neBEFrHQOYQKBgDaVg+OBmPOPKEi2ZnSkWqnLV6XWIdaJ+mt4K+Y7UhWJPvQy3KEy\ncJbsJgDQkMsPCloIDLZbNwCEgKvBsH/aU6HTx5ASwBxjgj+f9VAMror3PkAxDA3q\nTNZ/5JrA2cc977oIKC0/rHWFBGjFdPXH/jz1RhvXd9MKI8MPJqPNAyBhAoGABSYX\nrG5JVg0q8GMNtNBfHKyRX4kNseJEd2k4jFX2arD5NZ+z45DnaayGSx3US1luUdoT\nejAQBDWT5cB4Q5BhpwwbwP9U1pwl/0UmA2k1hM+MOZYTpLNG2BQnmdTxtjElzRzS\n3pocSRx8aileT5IBiNbVf8gqkR7G6FTT7vT+BeECgYEAx+CMEiay+lqtH5cGbydF\ncp2LH4ybboUEWBDM6BzrfPc8Asih70e7jDTPnQcKQaP7VxYaPoqFl0oS5f/xZHfe\nB6meudvVeylteXXK2R6t/rM+hIEz7ONgH7yeaZZx4/WWo7hU4ioAE6DLE08v8kGF\ncUkOwCJE4unH5RL4nNxB/Pc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "expo-lumi-games@pc-api-7742403866508050978-542.iam.gserviceaccount.com",
+  "client_id": "114495321628437857821",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/expo-lumi-games%40pc-api-7742403866508050978-542.iam.gserviceaccount.com"
+}

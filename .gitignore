@@ -2,7 +2,6 @@ node_modules/
 .expo/
 dist/
 npm-debug.*
-*.jks
 *.key
 *.orig.*
 web-build/
@@ -14,3 +13,5 @@ web-build/
 ios/
 android/
 *.ipa
+*.aab
+*.apk

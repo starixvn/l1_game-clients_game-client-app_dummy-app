@@ -22,11 +22,11 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.luminet.games",
-      "buildNumber": "54"
+      "buildNumber": "61"
     },
     "android": {
       "package": "com.luminet.games",
-      "versionCode": 2
+      "versionCode": 7
     },
     "extra": {
       "eas": {

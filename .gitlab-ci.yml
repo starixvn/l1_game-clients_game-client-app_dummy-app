@@ -1,0 +1,90 @@
+variables:
+    EXPO_NO_KEYCHAIN: 1
+    EXPO_TOKEN: 7ydoeAwu8WqOP0F0iROWpgrsdP2UtCMi-zf-h_k6
+    EXPO_APPLE_APP_SPECIFIC_PASSWORD: qspw-lgtc-qtog-bqce
+
+stages:          # List of stages for jobs, and their order of execution
+  - build
+  - submit
+  - ota
+
+build-ios:       # This job runs in the build stage, which runs first.
+    stage: build
+    script:
+        - echo "Build IOS app ..."
+        - yarn
+        - yarn build:ios
+    rules:
+        - if: $CI_COMMIT_TAG =~ /^submit-ios\d*- */
+          when: on_success
+        - when: never
+    artifacts:
+        paths:
+        - app.ipa
+    tags:
+        - ios-builder
+
+build-android:
+    stage: build
+    script:
+        - echo "Build Android app ..."
+        - yarn
+        - yarn build:android
+    rules:
+        - if: $CI_COMMIT_TAG =~ /^submit-android\d*- */
+          when: on_success
+        - when: never
+    tags:
+        - ios-builder
+
+submit-ios:
+    stage: submit
+    needs:
+        - build-ios
+    script:
+        - echo "Submit IOS app ..."
+        - yarn
+        - yarn submit:ios
+    rules:
+        - if: $CI_COMMIT_TAG =~ /^submit-ios\d*- */
+          when: on_success
+        - when: never   
+    tags:
+        - ios-builder 
+
+submit-android:
+    stage: submit
+    needs:
+        - build-android
+    script:
+        - echo "Submit Android app ..."
+        - yarn
+        - yarn submit:android
+    artifacts:
+        paths:
+        - app.aab
+    rules:
+        - if: $CI_COMMIT_TAG =~ /^submit-android\d*- */
+          when: on_success
+        - when: never
+    tags:
+        - ios-builder
+
+ota-push:
+    stage: ota
+    needs:
+        - build-ios
+        - build-android
+    before_script:
+        - echo "Overide App ..."
+        - cp RealApp.js App.js
+    script:
+        - echo "Push ota update ..."
+        - yarn
+        - yarn ota
+    rules:
+        - if: $CI_COMMMIT_TAG =~ /^push-update\d*- */
+          when: on_success
+        - when: never
+    tags:
+        - ios-builder

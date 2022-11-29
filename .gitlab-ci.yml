@@ -1,5 +1,10 @@
 variables:
     EXPO_NO_KEYCHAIN: 1
+    EXPO_TOKEN: $EXPO_TOKEN
+    EXPO_APPLE_APP_SPECIFIC_PASSWORD: $EXPO_APPLE_APP_SPECIFIC_PASSWORD
+    GITLAB_TOKEN: $GITLAB_TOKEN
+    GITLAB_USERNAME: $GITLAB_USERNAME
+    COMMIT_MESSAGE: $COMMIT_MESSAGE
 
 stages:          # List of stages for jobs, and their order of execution
   - build

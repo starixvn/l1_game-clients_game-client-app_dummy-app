@@ -112,8 +112,4 @@ ota-push:
                 git commit -m "${COMMIT_MESSAGE}"
                 git push origin "${CI_COMMIT_BRANCH}" -o ci.skip
             fi
-
-    image:
-        entrypoint: ['']
-        name: alpine/git:${GIT_VERSION}
     stage: sumbit

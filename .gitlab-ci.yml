@@ -71,7 +71,6 @@ ota-push:
     script:
         - echo "Push ota update ..."
         - yarn
-        - yarn build
         - yarn ota
     when: manual
     tags:

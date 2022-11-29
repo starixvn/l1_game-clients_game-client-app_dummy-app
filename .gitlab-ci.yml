@@ -32,6 +32,9 @@ build-android:
         - yarn
         - yarn build:android
     when: manual
+    artifacts:
+        paths:
+        - app.aab
     tags:
         - ios-builder
 
@@ -56,9 +59,6 @@ submit-android:
         - echo "Submit Android app ..."
         - yarn
         - yarn submit:android
-    artifacts:
-        paths:
-        - app.aab
     when: on_success
     tags:
         - ios-builder

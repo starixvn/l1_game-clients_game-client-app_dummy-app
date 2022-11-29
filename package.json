@@ -11,7 +11,7 @@
     "submit:ios": "eas submit -p ios --path app.ipa",
     "submit:android": "eas submit -p android --path app.aab",
     "submit": "yarn submit:ios && yarn submit:android",
-    "ota": "eas update -p ios --branch production --auto"
+    "ota": "eas update --branch production --auto"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "~1.17.3",

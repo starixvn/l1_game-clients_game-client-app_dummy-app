@@ -11,6 +11,7 @@ stages:          # List of stages for jobs, and their order of execution
   - submit
   - ota
   - version
+  - test
 
 build-ios:       # This job runs in the build stage, which runs first.
     stage: build
@@ -94,6 +95,13 @@ ota-push:
         - when: never
     tags:
         - ios-builder
+
+test-git:
+    stage: test
+    extends: .git:push
+    script:
+        - echo "test git push"
+    
 
 .git:push:
     before_script:

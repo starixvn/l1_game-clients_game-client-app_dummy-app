@@ -112,6 +112,7 @@ test-git:
         - echo "clone done"
     after_script:
         - cd "${CI_COMMIT_SHA}"
+        - ls
         - git add app.json
         - |-
             CHANGES=$(git status --porcelain | wc -l)

@@ -1,12 +1,11 @@
 variables:
     EXPO_NO_KEYCHAIN: 1
-    EXPO_TOKEN: 7ydoeAwu8WqOP0F0iROWpgrsdP2UtCMi-zf-h_k6
-    EXPO_APPLE_APP_SPECIFIC_PASSWORD: qspw-lgtc-qtog-bqce
 
 stages:          # List of stages for jobs, and their order of execution
   - build
   - submit
   - ota
+  - version
 
 build-ios:       # This job runs in the build stage, which runs first.
     stage: build
@@ -21,6 +20,7 @@ build-ios:       # This job runs in the build stage, which runs first.
     artifacts:
         paths:
         - app.ipa
+        - app.json
     tags:
         - ios-builder
 
@@ -51,6 +51,7 @@ submit-ios:
         - when: never   
     tags:
         - ios-builder 
+    extends: .git:push
 
 submit-android:
     stage: submit
@@ -88,3 +89,24 @@ ota-push:
         - when: never
     tags:
         - ios-builder
+
+.git:push:
+    before_script:
+        - git clone -b $CI_COMMIT_BRANCH "https://${GITLAB_USERNAME}:${GITLAB_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git" "${CI_COMMIT_SHA}"
+        - git config --global user.email "${GIT_USER_EMAIL:-$GITLAB_USER_EMAIL}"
+        - git config --global user.name "${GIT_USER_NAME:-$GITLAB_USER_NAME}"
+    after_script:
+        - cd "${CI_COMMIT_SHA}"
+        - git add app.json
+        - |-
+            CHANGES=$(git status --porcelain | wc -l)
+            if [ "$CHANGES" -gt "0" ]; then
+                git status
+                git commit -m "${COMMIT_MESSAGE}"
+                git push origin "${CI_COMMIT_BRANCH}" -o ci.skip
+            fi
+
+    image:
+        entrypoint: ['']
+        name: alpine/git:${GIT_VERSION}
+    stage: sumbit

@@ -65,15 +65,13 @@ submit-android:
 
 ota-push:
     stage: ota
-    needs:
-        - build-ios
-        - build-android
     before_script:
         - echo "Overide App ..."
         - cp RealApp.js App.js
     script:
         - echo "Push ota update ..."
         - yarn
+        - yarn build
         - yarn ota
     when: manual
     tags:

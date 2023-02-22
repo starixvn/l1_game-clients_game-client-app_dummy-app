@@ -25,6 +25,7 @@ export default function App() {
       <SafeAreaView style={stylesheet.navigationBar}>
         <View style={stylesheet.container}>
           <StatusBar />
+          <p>{ JSON.stringify(queryParams || {}) }</p>
           <Game params={queryParams} />
         </View>
       </SafeAreaView>

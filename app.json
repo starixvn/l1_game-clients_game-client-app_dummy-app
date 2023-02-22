@@ -22,6 +22,12 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.luminet.games",
+      "associatedDomains": [
+        "applinks:4qwcm.app.link",
+        "applinks:4qwcm-alternate.app.link",
+        "applinks:4qwcm.test-app.link",
+        "applinks:4qwcm-alternate.test-app.link"
+      ],
       "buildNumber": "65"
     },
     "android": {

@@ -28,6 +28,9 @@
         "applinks:4qwcm.test-app.link",
         "applinks:4qwcm-alternate.test-app.link"
       ],
+      "config": {
+        "usesNonExemptEncryption": true
+      },
       "buildNumber": "66"
     },
     "android": {

@@ -28,7 +28,7 @@
         "applinks:4qwcm.test-app.link",
         "applinks:4qwcm-alternate.test-app.link"
       ],
-      "buildNumber": "69"
+      "buildNumber": "70"
     },
     "android": {
       "package": "com.luminet.games",
